@@ -1,0 +1,30 @@
+
+HW #5.
+
+Question D.
+
+1.
+N^2
+
+2.
+log(N)
+
+3.
+N^3
+
+4.
+MN
+
+5.
+N
+
+6.
+log(f(x)) = logb(fx)/logb(10)
+K = 1/logb(10)
+
+7.
+Since p(x) is a polynomial of x, the highest order can be extracted out of
+the log, which equals O.
+
+8.
+Since every term is less than f(n), the run time is less than O(f(n)).

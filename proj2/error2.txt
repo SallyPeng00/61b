@@ -1,0 +1,39 @@
+GITBUG ERROR REPORT
+
+1. Type of operating system you are using to produce this error:
+
+Mac OS
+
+
+
+2. Version of the Java system you are using (java -version).
+
+Java 12
+
+
+
+3. Subdirectory of your Git working directory to use as the current
+   directory when compiling and running your program.
+repo/proj2
+
+
+
+4. EXACT sequence of commands that will cause the error you are seeing,
+   including anything needed to compile and execute the program.
+   It is NOT acceptable to say "any execution of the program fails"; give
+   us a specific one.
+
+I ran my program in IntelliJ with the correct input, and it spits out results
+without error. However, when I run make check, it gives error.
+
+
+
+5. What you see when you execute the commands in 4.
+
+** 00-initial-1 PASSED.
+** 00-playSelf-1 FAILED (Program 1 ended with: terminated with java.lang.AssertionError)
+** 00-simpmoves-1 PASSED.
+** 01-forceWin-a-1 FAILED (Program 1 ended with: terminated with java.lang.AssertionError)
+** 01-forceWin-b-1 FAILED (Program 1 ended with: terminated with java.lang.AssertionError)
+
+

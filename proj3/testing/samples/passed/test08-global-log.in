@@ -1,0 +1,42 @@
+# test global-log in branching situations
+> init
+<<<
+> branch cool-beans
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "added wug"
+<<<
++ wug.txt notwug.txt
+# Must change
+> checkout -- wug.txt
+<<<
+= wug.txt wug.txt
+> checkout cool-beans
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "commit 2"
+<<<
+D HEADER "commit [a-f0-9]+"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+D MESSAGE ".+"
+> global-log
+===
+${HEADER}
+${DATE}
+${MESSAGE}
+
+===
+${HEADER}
+${DATE}
+${MESSAGE}
+
+===
+${HEADER}
+${DATE}
+${MESSAGE}
+
+<<<*

@@ -1,0 +1,20 @@
+# test find.
+I prelude1.inc
++ a.txt file1.txt
+> add a.txt
+<<<
+> commit "adddeddewfdk a.txt"
+<<<
+> branch cool-beans
+<<<
+> checkout cool-beans
+<<<
++ b.txt notwug.txt
+> add b.txt
+<<<
+> commit "b in cool-beans"
+<<<
+= b.txt notwug.txt
+> rm-branch cool-beans
+Cannot remove the current branch.
+<<<

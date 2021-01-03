@@ -1,0 +1,37 @@
+# testing for basic add functionality and status bar.
+# the status should contain added files in the stage.
+# after commits, the status bar should be cleared.
+> init
+<<<
++ a.txt file1.txt
+> add a.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+a.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> commit "added a"
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<

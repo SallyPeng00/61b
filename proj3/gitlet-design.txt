@@ -1,0 +1,37 @@
+Gitlet Design Document
+----------------------
+This is a design outline for the Gitlet project.
+
+
+Classes and Data Structures
+---------------------------
+Classes: Commit, Stage(Staging Area), Repo, Main
+Main:
+Handles input, by reading it and passing the appropriate data type into Repo 
+for processing. Also handles reading/writing objects/contents as needed
+
+Repo:
+Contains almost all methods, init, add, etc. This is where the action happens. Has stage instance variable, has access to current directory, blobs, commits, etc. Write/add to commits and blobs.
+
+
+Commit:
+Handles commit, having metadata and pointers as HashMap(file name-sha1 of 
+file contents) to save its "files". Saves its parent sha1, for parent lookup
+
+Stage:
+Staging area. Handles add, rm actions.
+
+
+
+Algorithms
+----------
+The repo is read (fill out the stage and head information from reading the folder), and then the repo instance is responsible for any actions.
+
+
+Persistence
+-----------
+To keep track of the repository throughout different executions of the program, 
+information about commits, blobs, and tracked files are stored in folders, and HEAD.txt
+contains the sha1 id of the head commit. Stage is stored as a serializable object. Each time, the Main class reads the stage, and HEAD.txt to get the head.
+There is no need to serialize/deserialize every commit/blob object every time, as long as they are stored in a file, and only addition is done to them in this application.
+

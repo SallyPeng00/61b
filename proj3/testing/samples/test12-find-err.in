@@ -1,0 +1,27 @@
+# test find.
+I prelude1.inc
++ a.txt file1.txt
+> add a.txt
+<<<
+> commit "adddeddewfdk a.txt"
+<<<
+> branch cool-beans
+<<<
+> checkout cool-beans
+<<<
++ b.txt notwug.txt
+> add b.txt
+<<<
+> commit "b in cool-beans"
+<<<
+= b.txt notwug.txt
+> checkout master
+<<<
++ a.txt file2.txt
+> add a.txt
+<<<
+> commit "changed a.txt"
+<<<
+> find "dsakflwe"
+Found no commit with that message.
+<<<

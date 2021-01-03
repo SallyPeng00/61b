@@ -1,0 +1,50 @@
+
+how to manually test Gitlet:
+to compile: javac gitlet/*.java
+to init repository: mkdir ~/test-gitlet
+    mkdir ~test-gitlet/gitlet
+    pwd (print working directory)
+    cp gitlet/*.class ~/test-gitlet/gitlet
+    cd ~/test-gitlet/
+    java gitlet.Main init (to initialize the repository)
+to add: gitlet.Main add ...
+to commit: gitlet.Main commit "xxx"
+
+working directory: gitlet-test
+    gitlet repository
+        .gitlet file (check for this if repeated)
+            staging area
+                stage a file (name + blob)
+            commits (w/commit0: "initial commit" + 00:00 UTC. time!
+                master branch
+                HEAD (pointing working directory)
+            blobs
+                files to keep track of (name + version)
+                when a new file is created & committed / a pre-existing file is changed, new blob
+
+when a new commit is created. Set this to the blob; set this as parent of the most recent previous commit; move master
+& head to this commit
+When a new commit is made with some previous file unmodified, still keep track
+Use sha1(...) to store things like hash, but doesn't produce collisions
+
+Classes:
+Staging area
+    Set of ... for addition/removal
+Repo
+    commit-head
+    linkedlist? branches(master)
+    staging area
+    methods: add, remove, etc.
+        any method:
+            read from disk the necessary files (read the folder for stuff)
+            run method
+            write to the file
+        add
+            make
+            get blob saved for file name from current commit
+            if the blobs are the same, do nothing
+            else add (filename, blob) to staging area
+commit
+    HashMap<String, byte[](blob)>
+main
+    digest argument, call correct method
